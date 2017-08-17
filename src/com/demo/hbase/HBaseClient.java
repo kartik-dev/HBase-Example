@@ -19,6 +19,7 @@ public class HBaseClient {
 		Logger.getRootLogger().setLevel(Level.DEBUG);
 		Configuration configuration = HBaseConfiguration.create();
 		
+		// Zookeeper quorum
 		configuration.set("hbase.zookeeper.quorum", "node01.hortonworks.com,node02.hortonworks.com,node03.hortonworks.com");
 		configuration.set("hbase.zookeeper.property.clientPort", "2181");
 		configuration.set("hadoop.security.authentication", "kerberos");
